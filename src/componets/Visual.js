@@ -12,17 +12,23 @@ function Visual(props) {
       try {
         const response = await axios.get('https://run.mocky.io/v3/b3dc9e1b-165f-4648-ab73-1a75e82fd899');
         
-        for(var i=0  ;  i <25 ;i++)
+        for(var i=0  ;  i <100 ;i++)
         {
+          if(response.data.entries[i].programType==props.info){
           setDatos(oldArray => [...oldArray, response.data.entries[i]]);
+          
+          }
         }
       } catch (error) {
         console.error(error);
       }
     }
+
+
    
     
     useEffect(() => {  
+      setDatos([]);
 
       getElements();
      
