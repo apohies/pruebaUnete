@@ -24,7 +24,10 @@ function Principal(props) {
 
     if(count==1){
 
-      return (<Visual info={props.info}></Visual> )
+      return (
+      
+        <Visual info={props.info}></Visual>
+         )
     } else { }
   }
 

@@ -13,6 +13,13 @@ function App() {
   
   return (
       <div>
+        <form>
+        <div className="form-group col-md-4">
+          <label>Buscar</label>
+          <input className="form-control" />
+            
+        </div>
+         </form>
         <Principal name="Series"  info="series" ></Principal>
         <Principal name="Series"  info="movie" ></Principal>
       </div>
