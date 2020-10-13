@@ -1,16 +1,22 @@
-import React, { useState , useEffect  } from 'react';
+import React  from 'react';
 import "./Principal.css";
 
 
 function Principal(props) {
 
+  function clicker(){
+
+    props.variador(props.info); 
+   
+  }
+
   return (
     <div>
-        <a href="">
-        <div className="target-movie">
+       
+        <div className="target-movie" onClick={clicker}>
           <div className="titulo-movie">{props.name}</div>
         </div>
-      </a>
+      
            
     </div>
   );
